@@ -1,0 +1,12 @@
+:root{
+    --background-color: #F5F5F5;
+    --color-all-text: #292929;
+--color-down: #868686;
+}
+body{
+    background-color:var(--background-color);
+    color:var(--color-all-text);
+}
+.list{
+    list-style: none;
+}
