@@ -2,6 +2,8 @@
   --background-color: #ffffff;
   --color-all-text: #292929;
   --color-down: #868686;
+  --color-border: #000000;
+  --color-hover:#f5f5f5;
 }
 body {
   background-color: var(--background-color);
@@ -10,7 +12,13 @@ body {
   font-size: 18px;
   line-height: 1.4;
 }
-h1,h2,h3,h4,h5,h6,p{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -26,7 +34,7 @@ h2 {
 .link {
   text-decoration: none;
 }
-img{
+img {
   display: block;
 }
 .container {
@@ -37,16 +45,34 @@ img{
 }
 .button {
   color: inherit;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
 }
-.header{
+.button:hover,
+.button:focus{
+  background-color: var(--color-hover);
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.header {
   padding-bottom: 10px;
   padding-top: 60px;
 }
-.header-row{
+.header-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  /* outline: 1px solid #d93232; */
 }
 .header-tel {
   color: inherit;
@@ -59,7 +85,7 @@ img{
   line-height: 1.5;
   margin-bottom: 8px;
 }
-.header-wrapper{
+.header-wrapper {
   width: 300px;
 }
 .greetings-title,
@@ -67,18 +93,83 @@ img{
   font-size: 24px;
   line-height: 1.42;
 }
-.greetings-title{
+.greetings-title {
   margin-bottom: 20px;
 }
-.greetings-subtitle{
+.greetings-subtitle {
   margin-bottom: 20px;
 }
-.greetings-text{
+.greetings-text {
   margin-bottom: 40px;
+}
+.greetings-img {
+  margin-bottom: 20px;
+}
+.btn-greetings {
+  display: inline-block;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  width: 640px;
+  text-align: center;
+}
+.works {
+  padding-top: 40px;
+}
+.works-title {
+  margin-bottom: 40px;
+}
+.works-list {
+  display: flex;
+  gap: 11px;
+}
+.works-img {
+  border-radius: 20px;
+}
+.advantages {
+  padding-top: 40px;
+}
+.advantages-list {
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+.advantages-text {
+  margin-bottom: 12px;
+}
+.more {
+  padding-top: 40px;
+}
+.more-text {
+  margin-bottom: 20px;
+}
+.more-end {
+  margin-bottom: 40px;
+}
+.footer {
+  padding-top: 40px;
+  padding-bottom: 53px;
+  text-align: center;
+}
+.footer-img {
+  margin-bottom: 20px;
+}
+.footer-two {
+  display: flex;
+  gap: 10px;
+  width: 640px;
+  margin-bottom: 20px;
+}
+.footer-btn {
+  display: inline-block;
+  padding-bottom: 21px;
+  padding-top: 21px;
+  flex-basis: calc((100%-10px) / 2);
 }
 .footer-unsub {
   color: #868686;
   font-size: 15px;
   line-height: 1.67;
 }
-
+.footer-unsub:hover,
+.footer-unsub:focus{
+  color: var(--color-all-text);
+}
