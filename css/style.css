@@ -106,11 +106,12 @@ img {
   margin-bottom: 20px;
 }
 .btn-greetings {
-  display: inline-block;
+  display: inline-flex;
   padding-top: 21px;
   padding-bottom: 21px;
   width: 640px;
-  text-align: center;
+  align-items: center;
+ justify-content: center;
 }
 .works {
   padding-top: 40px;
@@ -159,7 +160,10 @@ img {
   margin-bottom: 20px;
 }
 .footer-btn {
-  display: inline-block;
+  /* display: inline-block; */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   padding-bottom: 21px;
   padding-top: 21px;
   flex-basis: calc((100%-10px) / 2);
@@ -172,4 +176,11 @@ img {
 .footer-unsub:hover,
 .footer-unsub:focus{
   color: var(--color-all-text);
+}
+.instagram::before{
+  content: '';
+ margin-right: 10px;
+  width: 32px;
+  height: 32px;
+  background-image: url(../images/instagram.svg);
 }
